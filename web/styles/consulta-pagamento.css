@@ -1,0 +1,198 @@
+/* 
+    Created on : 26/10/2021, 16:26:04
+    Author     : Gabriel
+*/
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul, h1, h2{
+    margin: 0;
+    padding: 0;
+}
+
+/* CABEÇALHO */
+.container-to-grid {
+    width:100%;
+    padding: 25px 0; 
+}
+
+.container-to-grid .top-bar {
+    max-width:62.5em;
+    margin:0 auto;
+}
+
+.logo-tavago, .top-bar-section {
+    display: inline-block;
+    vertical-align: center;
+}
+
+.top-bar .a, .top-bar .ul {
+    text-decoration: none;
+}
+
+ul.options {
+    list-style-type: none;
+}
+
+.top-bar-section {
+    float: right;
+}
+
+.logo-tavago {
+    height: 30px;
+    width: 150px;
+}
+
+
+
+/*POSICIONAMENTO*/   
+.consulta {
+    height: 200px;
+    width: 80%;
+    max-width: 750px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.descricao-pagamento{
+    text-align: center;
+}
+
+h3.realizar-pagamento{
+    color: orange;
+}
+    
+.card-view{
+    margin: 5px auto 5px auto;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    display:inline-grid;
+    vertical-align: bottom;
+    background-color: white;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #45a049;
+    color: white;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.checked {
+    color: orange;
+}
+
+.form-pagamento{
+    text-align: center;
+}
+
+
+
+    /* FORMULÁRIO */
+    .formulario-consulta, 
+    .formulario-pagamento {
+        background-color: white;
+        padding: 10px;
+        opacity: 0.9;
+    }
+
+    .formulario-consulta label, 
+    .formulario-pagamento label {
+        font-size: 12px;
+        color: #FF7719;
+        text-transform: uppercase;
+    }
+
+    .formulario-consulta .destino, .formulario-consulta .datas, .formulario-consulta .datas .entrada, .formulario-consulta .datas .saida, .formulario-consulta .quantidade, 
+    .formulario-pagamento {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    input[type=text] {
+        width: 100%;
+        max-width: 700px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=date] {
+        width: 100%;
+        padding: 12px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0 0 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    input.detail[type=submit]{
+        width: 50%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0 0 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input.detail[type=submit]:hover {
+        background-color: white;
+        color: orange;
+    }
+    
+    input.buscar-hotel[type=submit] {
+        width: inherit;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 25px 0 0 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input.buscar-hotel[type=submit]:hover {
+        background-color: #45a049;
+    }

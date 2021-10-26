@@ -1,0 +1,165 @@
+/* 
+    Created on : 26/10/2021, 15:58:08
+    Author     : Gabriel
+*/
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0px;
+}
+
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color:#000;
+}
+
+
+
+/* CABEÇALHO */
+.container-to-grid {
+    width:100%;
+    padding: 25px 0; 
+}
+
+.container-to-grid .top-bar {
+    max-width:62.5em;
+    margin:0 auto;
+}
+
+.logo-tavago, .top-bar-section {
+    display: inline-block;
+    vertical-align: center;
+}
+
+.top-bar .a, .top-bar .ul {
+    text-decoration: none;
+}
+
+ul.options {
+    list-style-type: none;
+}
+
+.top-bar-section {
+    float: right;
+}
+
+.logo-tavago {
+    height: 30px;
+    width: 150px;
+}
+
+
+
+/*POSICIONAMENTO*/   
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background: #3CB371;
+}
+.swiper-slide .img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.swiper-slide .img img{
+    width: 100%;
+}
+
+.swiper-slide .descricao{
+    text-align: center;
+}
+
+.informacaohotel {
+    text-align: center;
+}
+
+.informacaohotel h2{
+    position: relative; 
+    top: 10px; 
+    color: #383838;
+}
+
+.informacaohotel p{
+    color: #383838;
+}
+
+.informacaohotel h3{
+    text-align: center;
+}
+
+.detalhes{
+    text-align: center;
+    color: #000;
+}
+
+.descricao p{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;  
+    background: #ffffff;
+    padding: 25px 50px 30px;
+    font-size: 14px;
+    color: #383838;
+}
+
+.acomodacoes{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    text-align: center;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+    width: 60% !important;
+    margin: auto;
+    font-size: 14px;
+}
+.lista-acomodacao th{
+    background: #34bfa3;
+    color: #fff;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+table th{
+    vertical-align: bottom;
+    border-bottom: 2px solid #f4f5f8;
+    font-weight: 500;
+}
+
+td, th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #f4f5f8;
+    text-align: center;
+}
+
+th{
+    text-align: inherit;
+    font-weight: bold;
+    color: #383838;
+}

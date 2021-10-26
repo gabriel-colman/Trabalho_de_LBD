@@ -47,6 +47,7 @@ CREATE TABLE HOSPEDE (
     FOREIGN KEY (idPessoa) REFERENCES PESSOA(idPessoa)
 );
 
+-- Não coloquei estado nem paiz, por ser somente de uma região
 CREATE TABLE HOTEL(
     idHotel INTEGER PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
@@ -56,8 +57,6 @@ CREATE TABLE HOTEL(
     rua VARCHAR(255) NOT NULL,
     numeroHotel INTEGER NOT NULL,
     cidade VARCHAR(255) NOT NULL,
-    estado VARCHAR(255) NOT NULL,
-    pais VARCHAR(255) NOT NULL,
     idProprietario INTEGER NOT NULL,
     FOREIGN KEY (idProprietario) REFERENCES USUARIOPROPRIETARIO(idPessoa)
 );

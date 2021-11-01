@@ -30,7 +30,7 @@
                     <!-- Logotipo do Morro -->
                     <div class="morro">
                         <a href="${pageContext.request.contextPath}/home">
-                            <img class="morro" src="imagens/hill.png" alt="tavago"/>
+                            <img class="morro" src="imagens/hill.png" alt="morroPa"/>
                         </a>
                     </div>
 
@@ -49,8 +49,8 @@
 
             <!-- Cabeçalho -->
             <header class="header-welcome">
-                <h1>Bem-vindo ao TaVago!</h1>
-                <h3>O melhor hotel você encontra aqui</h3>
+                <h1>Bem-vindo ao Morro do Paxixi!</h1>
+                <h3>O recanto aonde não falta hoteis </h3>
             </header>
         </div>
 

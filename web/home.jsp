@@ -39,7 +39,7 @@
                         <ul class="options">
                             <li>
                                 <a href="${pageContext.request.contextPath}/carrinho">
-                                    <img class="carrinho" src="imagens/carrinho.png" alt="carrinho"/>
+                                    <img class="carrinho" src="imagens/carrinho.jpg" alt="carrinho"/>
                                 </a>
                             </li>
                         </ul>

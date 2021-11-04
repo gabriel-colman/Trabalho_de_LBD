@@ -47,7 +47,7 @@ CREATE TABLE HOSPEDE (
     FOREIGN KEY (idPessoa) REFERENCES PESSOA(idPessoa)
 );
 
--- Não coloquei estado nem paiz, por ser somente de uma região
+-- Não coloquei estado e nem paíz, por ser somente de uma região
 CREATE TABLE HOTEL(
     idHotel INTEGER PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE CATEGORIA(
     idCategoria INTEGER PRIMARY KEY,
     descricao VARCHAR(255) NOT NULL
 );
-
+-- É como se fosse id do quarto (Virou acomodação pelo estilos de quartos da região)
 CREATE TABLE ACOMODACAO(
     idHotel INTEGER NOT NULL,
     idAcomodacao INTEGER PRIMARY KEY,
@@ -95,3 +95,31 @@ CREATE TABLE ITEMRESERVA(
     FOREIGN KEY (idHospede) REFERENCES HOSPEDE(idPessoa),
     FOREIGN KEY (idAcomodacao) REFERENCES ACOMODACAO(idAcomodacao)
 );
+
+-- Adicionando as Triggers 
+
+--Trigger que  em vez  de  inserir  uma reserva, verifica  se  ela  utrapassou  
+--o  limite de reservas estipulado pelo hotel, se não estrapolou o limite ela insere a reserva.
+create or replace trigger insertReserva
+    instead of insert on ITEMRESERVA
+    for each row
+    declare total number;
+    begin     
+        select count(idReserva) into total from ITEMRESERVA;     
+        if (total < 20) then        
+        insert into ITEMRESERVA values(:new.idReserva, :new.idItemReserva, 
+            :new.idHospede, :new.idAcomodacao, :new.dataInicial, :new.dataFinal, :new.valor);     
+        end if;
+        end;
+$$ LANGUAGE PLPGSQL;
+
+-- Fazer o incremento em um acomodação
+
+CREATE FUNCTION increment_room_num() RETURNS trigger AS $$
+BEGIN
+update ACOMODACAO
+set idAcomodacao = idAcomodacao + 1 where idHotel = new.idHotel;
+RETURN NULL;
+END;
+$$ LANGUAGE plpgsql;
+

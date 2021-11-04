@@ -50,7 +50,7 @@
             <!-- Cabeçalho -->
             <header class="header-welcome">
                 <h1>Bem-vindo ao Morro do Paxixi!</h1>
-                <h3>O recanto aonde não falta hoteis </h3>
+                <h3>Aonde a Paz predomina </h3>
             </header>
         </div>
 

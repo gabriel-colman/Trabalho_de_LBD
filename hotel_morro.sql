@@ -98,24 +98,26 @@ CREATE TABLE ITEMRESERVA(
 
 -- Adicionando as Triggers 
 
---Trigger que  em vez  de  inserir  uma reserva, verifica  se  ela  utrapassou  
+--Trigger que  antes  de  inserir  uma reserva, verifica  se  ela  utrapassou  
 --o  limite de reservas estipulado pelo hotel, se não estrapolou o limite ela insere a reserva.
-create or replace trigger insertReserva
-    instead of insert on ITEMRESERVA
-    for each row
-    declare total number;
+CREATE OR REPLACE FUNCTION hotel_morro.insertReserva() RETURNS TRIGGER AS $$
+    declare total integer;
     begin     
         select count(idReserva) into total from ITEMRESERVA;     
         if (total < 20) then        
-        insert into ITEMRESERVA values(:new.idReserva, :new.idItemReserva, 
-            :new.idHospede, :new.idAcomodacao, :new.dataInicial, :new.dataFinal, :new.valor);     
+        insert into ITEMRESERVA values(new.idReserva, new.idItemReserva, 
+            new.idHospede, new.idAcomodacao, new.dataInicial, new.dataFinal, new.valor);     
         end if;
         end;
 $$ LANGUAGE PLPGSQL;
 
+CREATE TRIGGER reseva
+BEFORE UPDATE ON hotel_morro.ITEMRESERVA
+FOR EACH ROW EXECUTE PROCEDURE insertReserva();
+
 -- Fazer o incremento em um acomodação
 
-CREATE FUNCTION increment_room_num() RETURNS trigger AS $$
+CREATE FUNCTION hotel_morro.increment_room_num() RETURNS trigger AS $$
 BEGIN
 update ACOMODACAO
 set idAcomodacao = idAcomodacao + 1 where idHotel = new.idHotel;

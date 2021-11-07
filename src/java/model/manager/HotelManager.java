@@ -15,6 +15,8 @@ import model.entity.UsuarioProprietario;
  *
  * @author Gabriel
  */
+
+// Aqui é feito as operações básicas do hotel
 public class HotelManager {
 
     private final DAO factory;
@@ -27,7 +29,7 @@ public class HotelManager {
 
     public void cadastrarHotel(String nome, int quantidadeEstrela, String telefone, String rua, int numero, String cidade, String estado, String pais, String descricaoHotel, List<Integer> idCategoria, List<String> descricao, List<Double> valor, Integer idProprietario) throws CreateException {
         UsuarioProprietario proprietario = (UsuarioProprietario) factory.buscar(new UsuarioProprietario(), idProprietario);
-        Hotel hotel = new Hotel(nome, quantidadeEstrela, telefone, rua, numero, cidade, estado, pais, proprietario, descricaoHotel);
+        Hotel hotel = new Hotel(nome, quantidadeEstrela, telefone, rua, numero, cidade, proprietario, descricaoHotel);
         Collection<Acomodacao> acomodacao = new ArrayList<>();
         List<Categoria> categorias = factory.listar(new Categoria());
         for (int i = 0; i < descricao.size(); i++) {

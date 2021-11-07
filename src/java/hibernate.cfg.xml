@@ -37,14 +37,31 @@ However, if you add GPL Version 2 code and therefore, elected the GPL
 Version 2 license, then the option applies only if the new code is
 made subject to such option by the copyright holder.
 
-Contributor(s):
+Contributor(s): 
 -->
 <hibernate-configuration>
   <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
-    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/sample</property>
-    <property name="hibernate.connection.username">app</property>
-    <property name="hibernate.connection.password">app</property>
+    <!-- dados da conexao -->
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/morro</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">415232</property>
+    <!--  propriedades do hibernate -->
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.default_schema">hotel_morro</property>
+    <!-- entidades mapeada -->
+    <mapping class="model.entity.Categoria"/>
+    <mapping class="model.entity.Cartao"/>
+    <mapping class="model.entity.Pessoa"/>
+    <mapping class="model.entity.Hospede"/>
+    <mapping class="model.entity.Usuario"/>
+    <mapping class="model.entity.UsuarioHospede"/>
+    <mapping class="model.entity.UsuarioProprietario"/>
+    <mapping class="model.entity.Reserva"/>
+    <mapping class="model.entity.Hotel"/>
+    <mapping class="model.entity.ItemReserva"/>
+    <mapping class="model.entity.Acomodacao"/>
   </session-factory>
 </hibernate-configuration>

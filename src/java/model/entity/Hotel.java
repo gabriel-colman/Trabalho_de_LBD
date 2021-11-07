@@ -48,11 +48,11 @@ public class Hotel implements Serializable {
     @Column(nullable = false, length = 255)
     private String cidade;
 
-    @Column(nullable = false, length = 255)
-    private String estado;
-
-    @Column(nullable = false, length = 255)
-    private String pais;
+//    @Column(nullable = false, length = 255)
+//    private String estado;
+//
+//    @Column(nullable = false, length = 255)
+//    private String pais;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "idProprietario", referencedColumnName = "idPessoa")
@@ -74,34 +74,34 @@ public class Hotel implements Serializable {
         this.rua = rua;
         this.numeroHotel = numeroHotel;
         this.cidade = cidade;
-        this.estado = estado;
-        this.pais = pais;
+//        this.estado = estado;
+//        this.pais = pais;
         this.acomodacao = acomodacao;
         this.proprietario = proprietario;
     }
 
-    public Hotel(String nome, Integer quantidadeEstrela, String telefone, String rua, Integer numeroHotel, String cidade, String estado, String pais, UsuarioProprietario proprietario, String descricao) {
+    public Hotel(String nome, Integer quantidadeEstrela, String telefone, String rua, Integer numeroHotel, String cidade, UsuarioProprietario proprietario, String descricao) {
         this.nome = nome;
         this.quantidadeEstrela = quantidadeEstrela;
         this.telefone = telefone;
         this.rua = rua;
         this.numeroHotel = numeroHotel;
         this.cidade = cidade;
-        this.estado = estado;
-        this.pais = pais;
+//        this.estado = estado;
+//        this.pais = pais;
         this.proprietario = proprietario;
         this.descricao = descricao;
     }
 
-    public Hotel(String nome, Integer quantidadeEstrela, String telefone, String rua, Integer numeroHotel, String cidade, String estado, String pais) {
+    public Hotel(String nome, Integer quantidadeEstrela, String telefone, String rua, Integer numeroHotel, String cidade) {
         this.nome = nome;
         this.quantidadeEstrela = quantidadeEstrela;
         this.telefone = telefone;
         this.rua = rua;
         this.numeroHotel = numeroHotel;
         this.cidade = cidade;
-        this.estado = estado;
-        this.pais = pais;
+//        this.estado = estado;
+//        this.pais = pais;
     }
 
     public Hotel(Integer idHotel, String nome, Integer quantidadeEstrela, String telefone, String rua, Integer numeroHotel, String cidade, String estado, String pais, Collection<Acomodacao> acomodacao, UsuarioProprietario proprietario, String descricao) {
@@ -112,8 +112,8 @@ public class Hotel implements Serializable {
         this.rua = rua;
         this.numeroHotel = numeroHotel;
         this.cidade = cidade;
-        this.estado = estado;
-        this.pais = pais;
+//        this.estado = estado;
+//        this.pais = pais;
         this.acomodacao = acomodacao;
         this.proprietario = proprietario;
         this.descricao = descricao;
@@ -175,21 +175,21 @@ public class Hotel implements Serializable {
         this.cidade = cidade;
     }
 
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
+//    public String getEstado() {
+//        return estado;
+//    }
+//
+//    public void setEstado(String estado) {
+//        this.estado = estado;
+//    }
+//
+//    public String getPais() {
+//        return pais;
+//    }
+//
+//    public void setPais(String pais) {
+//        this.pais = pais;
+//    }
 
     public Collection<Acomodacao> getAcomodacao() {
         return acomodacao;
@@ -223,8 +223,8 @@ public class Hotel implements Serializable {
         this.rua = rua;
         this.numeroHotel = numeroHotel;
         this.cidade = cidade;
-        this.estado = estado;
-        this.pais = pais;
+//        this.estado = estado;
+//        this.pais = pais;
         this.proprietario = proprietario;
         this.acomodacao = acomodacao;
         this.descricao = descricao;
@@ -241,8 +241,8 @@ public class Hotel implements Serializable {
         hash = 89 * hash + Objects.hashCode(this.rua);
         hash = 89 * hash + Objects.hashCode(this.numeroHotel);
         hash = 89 * hash + Objects.hashCode(this.cidade);
-        hash = 89 * hash + Objects.hashCode(this.estado);
-        hash = 89 * hash + Objects.hashCode(this.pais);
+//        hash = 89 * hash + Objects.hashCode(this.estado);
+//        hash = 89 * hash + Objects.hashCode(this.pais);
         hash = 89 * hash + Objects.hashCode(this.descricao);
         return hash;
     }
@@ -271,12 +271,12 @@ public class Hotel implements Serializable {
         if (!Objects.equals(this.cidade, other.cidade)) {
             return false;
         }
-        if (!Objects.equals(this.estado, other.estado)) {
-            return false;
-        }
-        if (!Objects.equals(this.pais, other.pais)) {
-            return false;
-        }
+//        if (!Objects.equals(this.estado, other.estado)) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.pais, other.pais)) {
+//            return false;
+//        }
         if (!Objects.equals(this.idHotel, other.idHotel)) {
             return false;
         }

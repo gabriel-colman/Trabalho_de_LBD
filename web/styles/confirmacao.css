@@ -34,7 +34,7 @@ ul, h1, h2{
     margin:0 auto;
 }
 
-.logo-tavago, .top-bar-section {
+.logo-morro, .top-bar-section {
     display: inline-block;
     vertical-align: center;
 }
@@ -51,7 +51,7 @@ ul.options {
     float: right;
 }
 
-.logo-tavago {
+.logo-morro {
     height: 30px;
     width: 150px;
 }

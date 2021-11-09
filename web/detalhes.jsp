@@ -53,7 +53,7 @@
             <h2>${hotel.nome}</h2>
 
             <!--Informa o endereco-->
-            <p>${hotel.rua}, ${hotel.cidade} - ${hotel.estado}, ${hotel.pais}</p>
+            <p>${hotel.rua}, ${hotel.cidade} </p> 
 
             <h3>Confira as fotos do Hotel</h3>
         </div>

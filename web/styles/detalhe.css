@@ -23,6 +23,15 @@ body {
     color:#000;
 }
 
+#home-page {
+    background-image: url("../imagens/piraputanga.jpg"); /* foto tirado do google */
+    background-color: #cccccc;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 
 /* CABEÇALHO */
@@ -36,7 +45,7 @@ body {
     margin:0 auto;
 }
 
-.logo-tavago, .top-bar-section {
+.logo-morro, .top-bar-section {
     display: inline-block;
     vertical-align: center;
 }
@@ -53,7 +62,7 @@ ul.options {
     float: right;
 }
 
-.logo-tavago {
+.logo-morro {
     height: 30px;
     width: 150px;
 }

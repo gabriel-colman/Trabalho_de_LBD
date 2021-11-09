@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08/11/2021, 22:29:32
+    Author     : Acer
+*/
+
+   #resultado-page {
+    background-image: url("../imagens/piraputanga.jpg"); /* foto tirado do google */
+    background-color: #cccccc;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  #resultado-page .main-content {
+    height: 200px;
+    width: 80%;
+    max-width: 750px;
+    position: relative;
+    margin: 30px auto;
+    }
+    
+.main-content, .home-content, .cart-room, .cart-summary {
+    margin: 0;
+    padding: 0;
+}
+
+#home-page .main-content {
+    height: 200px;
+    width: 80%;
+    max-width: 750px;
+    position: relative;
+    margin: 30px auto;
+}
+
+#carrinho-page .main-content, #dadoshospedes-page .main-content {
+    width: 90%;
+    margin: 30px auto;
+    opacity: 1;
+}
+
+.result-mensage {
+    width: 600px;
+    margin: 0 auto;
+    opacity: 0.8;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 50px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}

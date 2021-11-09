@@ -9,12 +9,12 @@
 <html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="styles/pagamento-consulta.css"/>
-        <link rel="shortcut icon" href="images/favicon.ico"/>
-        <title>TaVago - Pagamento</title>
+        <link rel="stylesheet" type="text/css" href="styles/consulta-pagamento.css"/>
+        <link rel="shortcut icon" href="imagens/hotel.png"/>
+        <title>Pagamento</title>
     </head>
     <body id="pagamento-page">
-        
+
         <!-- Envoltório do cabeçalho -->
         <div class="header-wrap home-hw">
 
@@ -24,10 +24,10 @@
                 <!-- Top bar (logo e opções de navegação) -->
                 <nav class="top-bar">
 
-                    <!-- Logotipo TaVago -->
-                    <div class="logo-tavago">
+                    <!-- Logotipo do Morro -->
+                    <div class="morro">
                         <a href="${pageContext.request.contextPath}/home">
-                            <img class="logo-tavago" src="images/logo-tavago.png" alt="tavago"/>
+                            <img class="morro" src="imagens/hill.png" alt="morroPa"/>
                         </a>
                     </div>
 
@@ -36,7 +36,7 @@
                         <ul class="options">
                             <li>
                                 <a href="${pageContext.request.contextPath}/carrinho">
-                                    <img class="carrinho" src="images/carrinho.png" alt="carrinho"/>
+                                    <img class="carrinho" src="imagens/carrinho.jpg" alt="carrinho"/>
                                 </a>
                             </li>
                         </ul>
@@ -44,7 +44,7 @@
                 </nav>
             </div>
         </div>
-                                    
+
         <div class="descricao-pagamento">
             <h3 class="realizar-pagamento">
                 Realizar pagamento

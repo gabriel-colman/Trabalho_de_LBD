@@ -22,6 +22,16 @@ body {
     background-color: white;
 }
 
+   #resultado-page {
+    background-image: url("../imagens/piraputanga.jpg"); /* foto tirado do google */
+    background-color: #cccccc;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 ul, h1, h2, div, p{
     margin: 0;
     padding: 0;
@@ -47,7 +57,7 @@ a:hover {
     margin:0 auto;
 }
 
-.logo-tavago, .top-bar-section {
+.logo-morro, .top-bar-section {
     display: inline-block;
     vertical-align: center;
 }
@@ -64,7 +74,7 @@ ul.options {
     float: right;
 }
 
-.logo-tavago {
+.logo-morro {
     height: 30px;
     width: 150px;
 }
@@ -370,4 +380,13 @@ ul.options {
     .delete {
         margin-top: 30px;
         display: inline-block;
+    }
+    
+ 
+    #resultado-page .main-content {
+    height: 200px;
+    width: 80%;
+    max-width: 750px;
+    position: relative;
+    margin: 30px auto;
     }

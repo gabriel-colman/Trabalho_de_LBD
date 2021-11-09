@@ -10,11 +10,11 @@
 <html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="styles/home.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/resultado.css"/>
         <link rel="shortcut icon" href="imagens/hotel.png"/>
         <title>Resultado</title>
     </head>
-    <body id="resultado-page">
+    <body id="resultado-page" >
         
         <!-- Envoltório do cabeçalho da página resultado -->
         <div class="header-wrap carrinho-hw">

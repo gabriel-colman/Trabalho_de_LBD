@@ -7,7 +7,11 @@ and open the template in the editor.
     Created on : 08/11/2021, 22:29:32
     Author     : Acer
 */
-
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
    #resultado-page {
     background-image: url("../imagens/piraputanga.jpg"); /* foto tirado do google */
     background-color: #cccccc;

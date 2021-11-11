@@ -19,6 +19,7 @@
         <url-pattern>/adicionarCarrinho</url-pattern>
         <url-pattern>/removerCarrinho</url-pattern>
         <url-pattern>/atualizarCarrinho</url-pattern>
+        <url-pattern>/cadastroLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

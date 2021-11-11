@@ -71,6 +71,10 @@
                         </div>
 
                     </form>
+                    
+                    <div id="input-submit" class="input-wrap">
+                        <a class="complete-purchase" href="${pageContext.request.contextPath}/cadastroLogin">Cadastrar</a>
+                    </div>
 
                 </div>
             </div>

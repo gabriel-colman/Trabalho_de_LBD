@@ -44,7 +44,7 @@
                         <c:when test="${not empty idReserva}">
                             <h1 class="good-travel">Sua reserva foi realizada com sucesso!</h1>
                             <h2 class="good-travel">O número de pedido de sua reserva é ${idReserva}</h2>
-                            <h2 class="email-response">Informações adicionais serão enviadas ao endereço de email ${usuario.email}</h2>
+                            <h2 class="telefone-response">Informações adicionais serão enviadas para seu numero ${usuario.email}</h2>
                             <h2 class="good-travel">Desejamos uma boa viagem ${usuario.nome}!</h2>
                         </c:when>
                         <c:when test="${empty idReserva}">

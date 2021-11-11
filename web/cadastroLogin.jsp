@@ -1,6 +1,6 @@
 <%-- 
-    Document   : dadoshospede
-    Created on : 26/10/2021, 19:17:07
+    Document   : cadastroLogin
+    Created on : 09/11/2021, 22:33:06
     Author     : Gabriel
 --%>
 
@@ -13,7 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="styles/home.css"/>
         <link rel="shortcut icon" href="imagens/hotel.png"/>
-        <title>Dados hospede</title>
+        <title>Cadastro Usuario</title>
     </head>
     <body id="dadoshospede-page">
 
@@ -26,7 +26,7 @@
                 <!-- Top bar (logo e opções de navegação) -->
                 <nav class="top-bar">
 
-                   <!-- Logotipo do Morro -->
+                    <!-- Logotipo do Morro -->
                     <div class="morro">
                         <a href="${pageContext.request.contextPath}/home">
                             <img class="morro" src="imagens/hill.png" alt="morroPa"/>
@@ -41,7 +41,7 @@
 
             <header id="home-top">
                 <div class="form-description">
-                    <h2>Formulário de hóspede - ${qtdHospede+1}/${fn:length(carrinho.itensCarrinho)}</h2>
+                    <h2>Formulário do Usuario</h2>
                     <h2>Acomodação - ${descricaoAcomodacao}</h2>
                     <p>Preencha as informações abaixo para podermos cadastrar sua reserva</p>
                 </div>
@@ -50,8 +50,7 @@
             <div class="home-content">
                 <div class="form-wrap">
 
-                    <form class="formulario-hospede" method="POST" action="${pageContext.request.contextPath}/pagamento">
-                        <input type="hidden" id="itemCarrinho" name="itemCarrinho" value="${qtdHospede}">
+                    <form class="formulario-hospede" method="POST" action="${pageContext.request.contextPath}/login">
                         <fieldset class="personal">
                             <legend>Pessoal</legend>
 
@@ -71,38 +70,18 @@
                                 <input type="text" class="form-control phone-mask input-wrap-input" id="telefone" name="telefone" placeholder="Ex.: (00) 0000-0000" >
                             </div>
 
-                        </fieldset>
-
-                        <fieldset class="address">
-                            <legend>Endereço</legend>
-
-                            <div id="input-street" class="input-wrap">
-                                <label class="input-wrap-label" for="rua">Rua</label>
-                                <input type="text" class="form-control street-mask input-wrap-input" id="rua" name="rua" placeholder="Ex.: Carlos Ferreira" required>
+                            <div id="input-name" class="input-wrap">
+                                <label class="input-wrap-label" for="email">Email</label>
+                                <input type="text" class="form-control name-mask input-wrap-input" id="email" name="email" placeholder="Ex.: gabrie@gmail.com" required>
                             </div>
 
-                            <div id="input-house-number" class="input-wrap">
-                                <label class="input-wrap-label" for="numeroCasa">Número casa</label>
-                                <input type="number" class="form-control house-number-mask input-wrap-input" id="numeroCasa" name="numeroCasa" placeholder="Ex.: 22" required>
-                            </div>
-
-                            <div id="input-city" class="input-wrap">
-                                <label class="input-wrap-label" for="cidade">Cidade</label>
-                                <input type="text" class="form-control city-mask input-wrap-input" id="cidade" name="cidade" placeholder="Ex.: Aquidauana" required>
-                            </div>
-
-                            <div id="input-state" class="input-wrap">
-                                <label class="input-wrap-label" for="estado">Estado</label>
-                                <input type="text" class="form-control state-mask input-wrap-input" id="estado" name="estado" placeholder="Ex.: Mato Grosso do Sul" required>
-                            </div>
-
-                            <div id="input-country" class="input-wrap">
-                                <label class="input-wrap-label" for="pais">País</label>
-                                <input type="text" class="form-control country-mask input-wrap-input" id="pais" name="pais" placeholder="Ex.: Brasil" required>
+                            <div id="input-password" class="input-wrap">
+                                <label class="input-wrap-label" for="senha">Senha</label>
+                                <input type="password" class="form-control password-mask input-wrap-input" name="senha" id="senha" autocomplete="off" required>
                             </div>
 
                         </fieldset>
-
+                        
                         <div id="input-submit" class="input-wrap">
                             <input type="submit" value="Continuar">    
                         </div>
@@ -111,6 +90,7 @@
 
                 </div>
             </div>
+
 
         </section>
 

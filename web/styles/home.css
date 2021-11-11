@@ -22,15 +22,7 @@ body {
     background-color: white;
 }
 
-   #resultado-page {
-    background-image: url("../imagens/piraputanga.jpg"); /* foto tirado do google */
-    background-color: #cccccc;
-    height: 1000px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
+ 
 
 ul, h1, h2, div, p{
     margin: 0;

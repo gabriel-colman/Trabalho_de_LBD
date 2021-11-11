@@ -2,6 +2,7 @@ package controller;
 
 import model.entity.Carrinho;
 import java.io.IOException;
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
@@ -21,13 +22,13 @@ import model.entity.*;
  */
 // Para utilizar o conteiner GlassFish
 public class ReservaServletController extends HttpServlet {
-    
+
     //É declarada as classes que fazem o (crud) e colocom no banco de dados,
     // Ou seja recebendo do browser, chamando as funcionalidades das classes modelos e colocando no banco de dados
     HotelManager hotelManager = new HotelManager();
     PessoaManager pessoaManager = new PessoaManager();
     ReservaManager reservaManager = new ReservaManager();
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String jsp = null;
@@ -81,6 +82,10 @@ public class ReservaServletController extends HttpServlet {
             jsp = "/resultado.jsp";
         } else if (request.getRequestURI().endsWith("/login")) {
             jsp = "/login.jsp";
+        
+        } else if (request.getRequestURI().endsWith("/cadastroLogin")) {
+            CadastraLogin(request);
+            jsp = "/cadastroLogin.jsp";
         }
 
         request.getRequestDispatcher(jsp).forward(request, response);
@@ -186,6 +191,21 @@ public class ReservaServletController extends HttpServlet {
         }
     }
 
+    private void CadastraLogin(HttpServletRequest request) {
+        String nome = request.getParameter("nome");
+        String cpf = request.getParameter("cpf");
+        String telefone = request.getParameter("telefone");
+        String email = request.getParameter("email");
+        String senha = request.getParameter("senha");
+
+        Serializable usu = pessoaManager.cadastrarUsuarioHospede(nome, email, senha, cpf, telefone); 
+       
+//        Serializable usu = pessoaManager.cadastrarUsuarioHospede(nome, email, senha, cpf, telefone);
+//       
+//        UsuarioHospede hospede = (UsuarioHospede) request.getSession().getAttribute("usuario");
+//        hospede = pessoaManager.cadastrarUsuarioHospede1(hospede);
+    }
+
     public void dadosHospede(HttpServletRequest request) {
         String nome = request.getParameter("nome");
         String cpf = request.getParameter("cpf");
@@ -201,11 +221,12 @@ public class ReservaServletController extends HttpServlet {
         Carrinho carrinho = (Carrinho) request.getSession().getAttribute("carrinho");
         carrinho.addHospedeItemCarrinho(qtdHospede, hospede);
         request.getSession().setAttribute("qtdHospede", ++qtdHospede);
-        if ((int) request.getSession().getAttribute("qtdHospede") < carrinho.getItensCarrinho().size())
-        request.getSession().setAttribute("descricaoAcomodacao", ((Carrinho) request.getSession().getAttribute("carrinho"))
+        if ((int) request.getSession().getAttribute("qtdHospede") < carrinho.getItensCarrinho().size()) {
+            request.getSession().setAttribute("descricaoAcomodacao", ((Carrinho) request.getSession().getAttribute("carrinho"))
                     .getItensCarrinho().get(
                             (int) request.getSession().getAttribute("qtdHospede")).getAcomodacao().getDescricao()
             );
+        }
     }
 
     public void dadosPagamento(HttpServletRequest request) {
@@ -224,6 +245,5 @@ public class ReservaServletController extends HttpServlet {
         request.setAttribute("idReserva", idReserva);
         request.getSession().setAttribute("carrinho", null);
     }
-
 
 }

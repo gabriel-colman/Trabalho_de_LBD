@@ -62,7 +62,14 @@ public class PessoaManager {
         return factory.salvar(usuarioHospede);
 
     }
+    public UsuarioHospede cadastrarUsuarioHospede1(UsuarioHospede hospede) {
 
+        UsuarioHospede usuarioHospede =  hospede;
+
+        return (UsuarioHospede) factory.salvar(usuarioHospede);
+
+    }
+    
     public Serializable cadastrarUsuarioProprietario(String nome, String email, String senha, String cpf, String telefone) {
 
         UsuarioProprietario usuarioProprietario = new UsuarioProprietario(nome, cpf, telefone, email, senha);

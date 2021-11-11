@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author GAbriel
+ * @author Gabriel
  */
 @Entity
 @Table(name = "USUARIO")

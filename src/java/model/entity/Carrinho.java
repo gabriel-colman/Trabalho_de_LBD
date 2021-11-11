@@ -1,5 +1,6 @@
 package model.entity;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  *
  * @author Gabriel
  */
-public class Carrinho {
+public class Carrinho implements Serializable{
     private float valorTotal;
 
     private List<ItemCarrinho> itensCarrinho;

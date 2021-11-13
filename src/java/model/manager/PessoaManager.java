@@ -55,6 +55,22 @@ public class PessoaManager {
 
     }
 
+     public Usuario cadastrarUsuario(Integer id, String nome, String cpf, String telefone, String email, String senha) {
+        List<Usuario> buscar = factory.listar(new Usuario());
+        Optional<Usuario> findFirst = buscar.stream().filter(x -> x.getCpf().equals(cpf)).findFirst();
+        Usuario usuario = null;
+        if (findFirst.isPresent()) {
+            usuario = findFirst.get();
+        }
+        int id1;
+        if (usuario == null) {
+            usuario = new Usuario(email, senha, id, nome, cpf, telefone);
+            id1 = (int) factory.salvar(usuario);
+            usuario = (Usuario) factory.buscar(new Usuario(), id);
+        }
+        return usuario;
+    }
+    
     public Serializable cadastrarUsuarioHospede(String nome, String email, String senha, String cpf, String telefone) {
 
         UsuarioHospede usuarioHospede = new UsuarioHospede(nome, cpf, telefone, email, senha);
@@ -62,13 +78,7 @@ public class PessoaManager {
         return factory.salvar(usuarioHospede);
 
     }
-    public UsuarioHospede cadastrarUsuarioHospede1(UsuarioHospede hospede) {
-
-        UsuarioHospede usuarioHospede =  hospede;
-
-        return (UsuarioHospede) factory.salvar(usuarioHospede);
-
-    }
+   
     
     public Serializable cadastrarUsuarioProprietario(String nome, String email, String senha, String cpf, String telefone) {
 

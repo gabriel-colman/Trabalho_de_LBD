@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Acer
+ * @author Gabriel
  */
 @Entity
 @Table(name = "CATEGORIA")

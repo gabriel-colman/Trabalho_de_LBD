@@ -82,7 +82,7 @@ public class ReservaServletController extends HttpServlet {
             jsp = "/resultado.jsp";
         } else if (request.getRequestURI().endsWith("/login")) {
             jsp = "/login.jsp";
-        
+
         } else if (request.getRequestURI().endsWith("/cadastroLogin")) {
             CadastraLogin(request);
             jsp = "/cadastroLogin.jsp";
@@ -197,13 +197,10 @@ public class ReservaServletController extends HttpServlet {
         String telefone = request.getParameter("telefone");
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
+        
+        Usuario usuario = (Usuario) request.getSession().getAttribute("usuario");
+        usuario = pessoaManager.cadastrarUsuario(Integer.SIZE, nome, cpf, telefone, email, senha);
 
-        Serializable usu = pessoaManager.cadastrarUsuarioHospede(nome, email, senha, cpf, telefone); 
-       
-//        Serializable usu = pessoaManager.cadastrarUsuarioHospede(nome, email, senha, cpf, telefone);
-//       
-//        UsuarioHospede hospede = (UsuarioHospede) request.getSession().getAttribute("usuario");
-//        hospede = pessoaManager.cadastrarUsuarioHospede1(hospede);
     }
 
     public void dadosHospede(HttpServletRequest request) {

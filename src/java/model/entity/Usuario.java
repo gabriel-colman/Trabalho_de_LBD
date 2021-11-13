@@ -90,4 +90,8 @@ public class Usuario extends Pessoa implements Serializable {
         }
         return true;
     }
+    
+     public void addHospedeItemCarrinho(int qtdHospede, Pessoa pessoa) {
+        
+    }
 }

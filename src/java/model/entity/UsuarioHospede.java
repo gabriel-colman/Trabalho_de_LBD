@@ -119,4 +119,5 @@ public class UsuarioHospede extends Usuario implements Serializable {
         return true;
     }
 
+    
 }
